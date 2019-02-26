@@ -35,8 +35,7 @@ class attentionlstm(baseline_model):
           self.final_fc = nn.Linear(128, 3)
           self.scale = 1. / math.sqrt(60)
 
-          self.attention_w = nn.Linear(128, 32)
-          self.attention_u = nn.Parameter(torch.randn((32,16)))
+
 
         def attend(self, S,lstm_out, lstm_out1):
 
